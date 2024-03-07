@@ -10,3 +10,21 @@
 7. Update the pipeline
 8. Update the main.py
 9. Update the dvc.yaml
+
+### [dagshub](https://dagshub.com)
+
+MLFLOW_TRACKING_URI=https://dagshub.com/mdaiyub/Chest-Cancer-Diagnosis-using-MLflow-DVC.mlflow \
+MLFLOW_TRACKING_USERNAME=mdaiyub \
+MLFLOW_TRACKING_PASSWORD=2396d88de0c1933baa9dc1c6f3ac2206f797008b \
+python script.py
+
+Run this to export as chestcancer environment  variable:
+
+```bash
+export MLFLOW_TRACKING_URI=https://dagshub.com/mdaiyub/Chest-Cancer-Diagnosis-using-MLflow-DVC.mlflow
+export MLFLOW_TRACKING_USERNAME=mdaiyub
+export MLFLOW_TRACKING_PASSWORD=2396d88de0c1933baa9dc1c6f3ac2206f797008b
+```
+
+
+
