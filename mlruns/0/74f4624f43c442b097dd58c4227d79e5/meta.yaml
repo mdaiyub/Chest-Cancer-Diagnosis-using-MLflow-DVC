@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Aiyub/Research/Chest-Cancer-Diagnosis-using-MLflow-DVC/mlruns/0/74f4624f43c442b097dd58c4227d79e5/artifacts
+end_time: 1710139974537
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 74f4624f43c442b097dd58c4227d79e5
+run_name: resilient-donkey-740
+run_uuid: 74f4624f43c442b097dd58c4227d79e5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1710139966765
+status: 3
+tags: []
+user_id: naymm
