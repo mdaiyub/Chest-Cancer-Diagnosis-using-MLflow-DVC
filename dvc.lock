@@ -32,8 +32,8 @@ stages:
       params.yaml:
         CLASSES: 2
         IMAGE_SIZE:
-        - 224
-        - 224
+        - 256
+        - 256
         - 3
         INCLUDE_TOP: false
         LEARNING_RATE: 0.001
@@ -41,8 +41,8 @@ stages:
     outs:
     - path: artifacts/prepare_base_model
       hash: md5
-      md5: 5ac0871f2e886841a22c36f51fcc888d.dir
-      size: 118054560
+      md5: dbf6a4a5da0c658d28550441e1324d41.dir
+      size: 118116000
       nfiles: 2
   training:
     cmd: python src/ChestDiagnosisClassifier/pipeline/stage_3_model_trainer.py
@@ -54,8 +54,8 @@ stages:
       nfiles: 263
     - path: artifacts/prepare_base_model
       hash: md5
-      md5: 5ac0871f2e886841a22c36f51fcc888d.dir
-      size: 118054560
+      md5: dbf6a4a5da0c658d28550441e1324d41.dir
+      size: 118116000
       nfiles: 2
     - path: config/config.yaml
       hash: md5
@@ -69,16 +69,16 @@ stages:
       params.yaml:
         AUGMENTATION: true
         BATCH_SIZE: 16
-        EPOCHS: 10
+        EPOCHS: 500
         IMAGE_SIZE:
-        - 224
-        - 224
+        - 256
+        - 256
         - 3
     outs:
     - path: artifacts/training/model.h5
       hash: md5
-      md5: ea51909ab8c948fd7053c96d4f756c2c
-      size: 59337520
+      md5: b4decb87ff620da44a743c2179d95652
+      size: 59460400
   evaluation:
     cmd: python src/ChestDiagnosisClassifier/pipeline/stage_4_model_evaluation.py
     deps:
@@ -89,8 +89,8 @@ stages:
       nfiles: 263
     - path: artifacts/training/model.h5
       hash: md5
-      md5: ea51909ab8c948fd7053c96d4f756c2c
-      size: 59337520
+      md5: b4decb87ff620da44a743c2179d95652
+      size: 59460400
     - path: config/config.yaml
       hash: md5
       md5: 4586463a03514b20323376931b926fe3
@@ -103,11 +103,11 @@ stages:
       params.yaml:
         BATCH_SIZE: 16
         IMAGE_SIZE:
-        - 224
-        - 224
+        - 256
+        - 256
         - 3
     outs:
     - path: scores.json
       hash: md5
-      md5: f19ba1d9ca00d31183b412e0826da09f
-      size: 74
+      md5: 11e514bc9f17f0a1f59bb0f5be19e872
+      size: 60
